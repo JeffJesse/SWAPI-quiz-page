@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Italic;
+}
+
+.all-body {
+    background-image: url("/recursosQuiz/fondo1.jpg");
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.all-header{
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    padding: 10px 10px;
+    transition: ease 0.3s;
+}
+
+.all-header .logo img{
+    height: 70px;
+    width: auto;
+    margin-right: auto;
+}
+
+.all-header .img:hover{
+    transform: scale(1.2);
+}
+
+.all-header .navSection {
+    display: flex; 
+    align-items: center; 
+}
+
+.all-header .navlinks {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.all-header .navlinks li {
+    display: inline-block; 
+    margin-right: 10px; 
+}
+
+.all-header .navlinks li:last-child {
+    margin-right: 0; 
+}
+
+.all-header .navlinks li a {
+    text-decoration: none; 
+    color: white; 
+    padding: 10px 20px; 
+    border: 1px solid transparent; 
+    transition: border-color 0.3s; 
+}
+
+.all-header .navlinks li.active a {
+    font-weight: bold;
+    color: #ffcc00; 
+    border: 1px solid transparent; 
+    border-color: #ffcc00; 
+}
+
+.all-header .navlinks li a:hover {
+    border-color: white; 
+    font-weight: bold;
+}
+
+.custom-alert {
+    background-color: #D4EDDA; 
+    border: 1px solid #C3E6CB;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-radius: 20px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.custom-alert p {
+    margin: 0;
+    text-align: center;
+    color: #155724;
+}
+
+.custom-alert-warning {
+    background-color: #FFEEBA; 
+    border: 1px solid #FFF3CD;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-radius: 20px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.custom-alert-warning p {
+    margin: 0;
+    text-align: center;
+    color: #856404;
+}
+
+.custom-alert-error {
+    background-color: #F5C6CB; 
+    border: 1px solid #F8D7DA;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-radius: 20px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.custom-alert-error p {
+    margin: 0;
+    text-align: center;
+    color: #971C24;
+}
+
+.selectorQuiz {
+    margin-top: 40px;
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    order: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.opcionesQuiz {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.opcionesQuiz li {
+    margin: 5px;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.opcionesQuiz a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: block;
+}
+
+.opcionesQuiz a:hover {
+    scale: 1.10;
+    background-color: black;
+    border-radius: 8px;
+    border:  solid #F2D24E;
+}
+
+.opcionesQuiz a.active {
+    background-color: #F2D24E;
+    scale: 1.10;
+    color: #000;
+    border:  solid #000;
+}
+
+.agruparContenido{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.agruparContenido .custom-alert .custom-alert-error .custom-alert-warning{
+    transform: translateY(1000px);
+}
+
+.card {
+    order: 1;
+    position: relative;
+    background-color: #000000;
+    background-position: center;
+    background-size: cover;
+    font-weight: bold;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
+    padding: 20px;
+    min-width: 300px;
+    max-width: 800px;
+    min-height: 100px;
+    margin: auto;
+    text-align: center;
+    border-image: linear-gradient(#f6b73c, #3e3f3e) 30;
+    border-width: 4px;
+    border-style: solid;
+    font-size: xx-large;
+}
+
+#info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#question-counter {
+    font-size: 16px;
+}
+
+#life-icons, p {
+    margin-right: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #ffe81f;
+}
+
+#life-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #ff1f1f;
+}
+
+#life-icons i {
+    margin-right: 5px;
+}
+
+.card h1 {
+    color: #ffe81f;
+    margin-bottom: 0px;
+}
+
+.card h2 {
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.card img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    filter: brightness(0.1);
+    transition: filter 0.5s ease;
+}
+
+#question {
+    color: #ffe81f;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: large;
+    background-color: #F2D24E;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #000;
+    border: solid #F2D24E;
+    color: white;
+    scale: 1.05;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 10px;
+        min-width: 200px;
+    }
+
+    #info-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #life-icons {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+}

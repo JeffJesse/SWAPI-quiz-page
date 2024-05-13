@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Italic;
+}
+
+.allbody{
+    background-image: url('/recursos/mando.jpg');
+    background-position:right;
+    background-size: cover;
+}
+
+.all-header {
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    padding: 10px 10px;
+    transition: ease 0.3s;
+}
+
+.all-header .logo img {
+    height: 70px;
+    width: auto;
+    margin-right: auto;
+}
+
+.all-header .img:hover {
+    transform: scale(1.2);
+}
+
+.all-header .navSection {
+    display: flex;
+    align-items: center;
+}
+
+.all-header .navlinks {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.all-header .navlinks li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.all-header .navlinks li:last-child {
+    margin-right: 0;
+}
+
+.all-header .navlinks li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.all-header .navlinks li.active a {
+    font-weight: bold;
+    color: #ffcc00;
+    border: 1px solid transparent;
+    border-color: #ffcc00;
+}
+
+.all-header .navlinks li a:hover {
+    border-color: white;
+    font-weight: bold;
+}
+
+.section {
+    width: 100%;
+    padding: 135px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section h1 {
+    text-align: center;
+    font-size: 7.5vh;
+    color: #09061f;
+    -webkit-text-stroke: 1px #ffcc00;
+}
+
+.content {
+    text-align: center;
+}
+
+
+.landing-content {
+    text-align: center;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.landing-content h2 {
+    text-align: center;
+    font-size: 9.5vh;
+    color: #000000;
+    -webkit-text-stroke: 1px #ffcc00;
+}
+
+
+.landing-content p {
+    font-size: 2.5vw;
+    color: #e4dcdc;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.button {
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 24px;
+    background: #000;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    transition: scale 0.5;
+}
+
+.button:hover {
+    background: #caaa2a;
+    scale: 1.05;
+    color: black; 
+    border: solid #000;
+}
+
+
+.image-container {
+    max-width: 40%;
+    text-align: center; 
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+    border-radius: 20px;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #333; 
+    padding: 10px 0; 
+    z-index: 1000; 
+}
+
+.logo {
+    float: left; 
+}
+
+.navbar {
+    text-align: center; 
+}
+
+.peliculas-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pelicula {
+    text-align: center; 
+    position: relative;
+    background-color: #000000;
+    border-radius: 10px;
+    display: wrap;
+    max-width: 340px;
+    max-width: 340px;
+}
+
+.pelicula img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+}
+
+.pelicula:hover img {
+    transform: scale(1.1);
+}
+
+.info-pelicula {
+    margin-top: 10px;
+    font-size: 40px;
+    color: #000;
+    display: inline-block;  
+    background-color: #f09000;
+    border-radius: 10px;
+    display: wrap;
+}
+
+.info-pelicula h4 {
+    margin: 0;
+}
+
+.pelicula:hover {
+    display: block;
+}
+.peliculas-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pelicula {
+    text-align: center; 
+    position: relative;
+    width: calc(33.33% - 20px); 
+    margin-bottom: 20px; 
+}
+
+.navbar {
+    text-align: center; 
+    background-color: #14010f; 
+    padding: 40px 0; 
+}
+
+.navbar a {
+    color: #fff; 
+    text-decoration: none;
+    padding: 10px 30px; 
+    margin: 0 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.navbar a:hover {
+    background-color: #6c3483; 
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .landing-content {
+        order: 2;
+        flex: initial;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
+    .image-container {
+        order: 1;
+        flex: initial;
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+}

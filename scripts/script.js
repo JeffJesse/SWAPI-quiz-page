@@ -50,10 +50,10 @@ $(document).ready(function(){
     }
 
     function loadQuestion() {
-        reiniciarVidas();
         let intentosRestantesPersonajes = 3;
         if (characters.length === 0) {
-            mostrarAlertaPersonalizada("¡Impresionante... ¡Muy impresionante! Controlas tu miedo, Obi-Wan te ha instruido bien...", "recursos/vidas3.png");
+            mostrarAlertaExito("Obi-Wan te ha instruido bien...");
+            reiniciarVidas();
             resetPersonajesQuiz();
             return;
         }
@@ -201,10 +201,10 @@ $(document).ready(function(){
     }
 
     function loadPlanetsQuestion() {
-        reiniciarVidas();
         let intentosRestantesPlanetas = 3;
         if (planets.length === 0) {
-                mostrarAlertaExito("¡Impresionante... ¡Muy impresionante! Controlas tu miedo, Obi-Wan te ha instruido bien...")
+            mostrarAlertaExito("Obi-Wan te ha instruido bien...");
+                reiniciarVidas();
                 resetPlanetasQuiz();
             return;
         }

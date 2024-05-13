@@ -54,12 +54,12 @@ async function fetchData(url) {
   function determineImageSrc(id) {
     let imageSrc;
     if (window.location.pathname.includes('/personajes.html')) {
-        imageSrc = `recursosQuiz/${id}.jpg`;
+        imageSrc = `recursos/${id}.jpg`;
     } else if (window.location.pathname.includes('/planetas.html')) {
-        imageSrc = `recursosQuiz/planeta${id}.jpg`; 
+        imageSrc = `recursos/planeta${id}.jpg`; 
     } else {
         console.log("No se puede determinar la página actual.");
-        imageSrc = `recursosQuiz/${id}.jpg`;
+        imageSrc = `recursos/${id}.jpg`;
     }
     return imageSrc;
   }

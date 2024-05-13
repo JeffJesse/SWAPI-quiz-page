@@ -7,7 +7,7 @@
 }
 
 .all-body {
-    background-image: url("/recursosQuiz/fondo1.jpg");
+    background-image: url("/recursos/fondo1.jpg");
     background-position: center;
     flex-direction: column;
     justify-content: center;

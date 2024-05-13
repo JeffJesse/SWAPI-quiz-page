@@ -53,7 +53,7 @@ $(document).ready(function(){
         reiniciarVidas();
         let intentosRestantesPersonajes = 3;
         if (characters.length === 0) {
-            mostrarAlertaPersonalizada("¡Impresionante... ¡Muy impresionante! Controlas tu miedo, Obi-Wan te ha instruido bien...", "recursosQuiz/vidas3.png");
+            mostrarAlertaPersonalizada("¡Impresionante... ¡Muy impresionante! Controlas tu miedo, Obi-Wan te ha instruido bien...", "recursos/vidas3.png");
             resetPersonajesQuiz();
             return;
         }
@@ -95,7 +95,7 @@ $(document).ready(function(){
                 }
 
                 $("#question").text(question);
-                $("#character-image").attr("src", "recursosQuiz/" + characterId + ".jpg");
+                $("#character-image").attr("src", "recursos/" + characterId + ".jpg");
 
                 shuffleArray(options);
 
@@ -204,7 +204,7 @@ $(document).ready(function(){
         reiniciarVidas();
         let intentosRestantesPlanetas = 3;
         if (planets.length === 0) {
-                mostrarAlertaExito("¡Impresionante... ¡Muy impresionante! Controlas tu miedo, Obi-Wan te ha instruido bien...", "recursosQuiz\Yoda.webp")
+                mostrarAlertaExito("¡Impresionante... ¡Muy impresionante! Controlas tu miedo, Obi-Wan te ha instruido bien...")
                 resetPlanetasQuiz();
             return;
         }
@@ -246,7 +246,7 @@ $(document).ready(function(){
                 }
 
                 $("#question").text(question);
-                $("#character-image").attr("src", "recursosQuiz/planeta" + planetId + ".jpg");
+                $("#character-image").attr("src", "recursos/planeta" + planetId + ".jpg");
 
                 shuffleArray(options);
 

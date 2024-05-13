@@ -151,3 +151,21 @@ body {
         width: calc(50% - 20px); 
     }
 }
+.navbar {
+    text-align: center; 
+    background-color: #14010f; 
+    padding: 40px 0; 
+}
+
+.navbar a {
+    color: #fff; 
+    text-decoration: none;
+    padding: 10px 30px; 
+    margin: 0 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.navbar a:hover {
+    background-color: #6c3483; 
+}

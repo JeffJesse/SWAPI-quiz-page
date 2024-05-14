@@ -42,9 +42,9 @@
         border-image: linear-gradient(#f6b73c, #3e3f3e) 30;
         border-width: 4px;
         border-style: solid;
-        overflow: hidden; /* Evitar que la imagen se desborde del contenedor */
+        overflow: hidden; 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: scale 0.5s ease-in-out; /* Transición suave al hacer hover */
+        transition: scale 0.5s ease-in-out;
   }
 
     .card:hover {
@@ -53,7 +53,7 @@
   
   .card-image {
     width: 100%;
-    height: auto; /* Altura de la imagen */
+    height: auto;
     overflow: hidden;
     }
 
@@ -75,14 +75,14 @@
         left: 0;
         width: 100%;
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+        background-color: rgba(0, 0, 0, 0.7); 
         color: #fff;
         transition: opacity 0.3s ease-in-out;
-        opacity: 0; /* Inicialmente oculto */
+        opacity: 0; 
     }
 
     .card:hover .card-info {
-        opacity: 1; /* Mostrar la información al hacer hover */
+        opacity: 1; 
     }
 
     .card-info h2 {

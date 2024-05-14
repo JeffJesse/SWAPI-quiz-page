@@ -420,14 +420,13 @@ $(document).ready(function(){
                     loadPlanetsQuestion();
                 } else {
                     intentosRestantesPlanetas--;
-                    reiniciarVidas();
+                    quitarVidasPlanetas();
                     if (intentosRestantesPlanetas === 0) {
                         corazon1.style.display = 'none';
                         mostrarAlertaError("Me ha fallado por última vez, Almirante");
                         resetPlanetasQuiz();
                     } else {
                         mostrarAlertaAdvertencia("Respuesta incorrecta.");
-                        quitarVidasPlanetas();
                     }
                 }
             });

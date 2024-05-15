@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Italic;
+}
+
+.all-body {
+  background-image: url("/recursos/fondo1.jpg");
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: transform 0.3s ease-in-out;
+}
+
+.all-header {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+  padding: 10px 10px;
+  transition: ease 0.3s;
+}
+
+.all-header .logo img {
+  height: 70px;
+  width: auto;
+  margin-right: auto;
+}
+
+.all-header .img:hover {
+  transform: scale(1.2);
+}
+
+.all-header .nav-section {
+  display: flex;
+  align-items: center;
+}
+
+.all-header .nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.all-header .nav-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.all-header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+.all-header .nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.all-header .nav-links li.active a {
+  font-weight: bold;
+  color: #ffcc00;
+  border: 1px solid transparent;
+  border-color: #ffcc00;
+}
+
+.all-header .nav-links li a:hover {
+  border-color: white;
+  font-weight: bold;
+}
+
+.alerta-exito {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.alerta-exito p {
+  margin: 0;
+  color: #155724;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alerta-advertencia {
+  background-color: #ffeeba;
+  border: 1px solid #fff3cd;
+  padding: 10px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.alerta-advertencia p {
+  margin: 0;
+  color: #856404;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alerta-perder {
+  background-color: #f5c6cb;
+  border: 1px solid #f8d7da;
+  padding: 10px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.alerta-perder p {
+  margin: 0;
+  color: #971c24;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alerta-ganar {
+  background-color: #6e81ec;
+  border: 1px solid #3782f3;
+  padding: 10px;
+  margin: 5px auto;
+  border-radius: 20px;
+  max-width: 300px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.alerta-ganar p {
+  margin: 0;
+  color: #0a0550;
+  font-weight: bold;
+  text-align: center;
+}
+
+.respuesta-correcta {
+  border: 4px solid rgb(53, 211, 53);
+  background-color: rgb(62, 241, 62);
+}
+
+.respuesta-incorrecta {
+  border: 4px solid rgb(218, 45, 45);
+  background-color: rgb(255, 53, 53);
+}
+
+.selector-quiz {
+  margin-top: 20px;
+  background-color: transparent;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  order: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.opciones-quiz {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.opciones-quiz li {
+  margin: 5px;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.opciones-quiz a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: block;
+}
+
+.opciones-quiz a:hover {
+  scale: 1.1;
+  background-color: black;
+  border-radius: 8px;
+  border: solid #f2d24e;
+}
+
+.opciones-quiz a.active {
+  background-color: #f2d24e;
+  scale: 1.1;
+  color: #000;
+  border: solid #000;
+}
+
+.agrupar-contenido {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  order: 1;
+  position: relative;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-width: 300px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  border-image: linear-gradient(#f6b73c, #3e3f3e) 30;
+  border-width: 4px;
+  border-style: solid;
+  font-size: xx-large;
+}
+
+#contenedor-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #f0f0f0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#contador-preguntas {
+  font-size: 16px;
+}
+
+#iconos-vidas,
+p {
+  margin-right: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: #ffe81f;
+}
+
+#iconos-vidas {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #ff1f1f;
+}
+
+#iconos-vidas i {
+  margin-right: 5px;
+}
+
+.card h1 {
+  color: #ffe81f;
+  margin-bottom: 0px;
+}
+
+.card h2 {
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.card img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  filter: brightness(0.1);
+  transition: filter 0.5s ease;
+}
+
+#pregunta {
+  color: #ffe81f;
+  margin-bottom: 20px;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: large;
+  background-color: #f2d24e;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  display: block;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: #000;
+  border: solid #f2d24e;
+  color: white;
+  scale: 1.05;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 10px;
+    min-width: 200px;
+  }
+
+  #contenedor-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #iconos-vidas {
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+}

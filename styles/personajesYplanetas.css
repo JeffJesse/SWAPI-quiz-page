@@ -1,160 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", Italic;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Italic;
 }
 
 .all-body {
-    background-image: url("/recursos/fondo1.jpg");
-    background-position: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    transition: transform 0.3s ease-in-out;
+  background-image: url("/recursos/fondo1.jpg");
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: transform 0.3s ease-in-out;
 }
 
-.all-body h1{
-    text-align: center;
-    font-size: 10vh;
-    color: #000000;
-    -webkit-text-stroke: 1px #ffcc00;
+.all-body h1 {
+  text-align: center;
+  font-size: 7vh;
+  color: #000;
+  -webkit-text-stroke: 1px #ffcc00;
 }
 
-    .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    } 
-  
-    .card {
-        background-color: #000000;
-        position: relative;
-        overflow: hidden;
-        font-size: xx-large;
-        min-width: 200px;
-        min-width: auto;
-        min-height: auto;
-        max-height: 300px;
-        border-image: linear-gradient(#f6b73c, #3e3f3e) 30;
-        border-width: 4px;
-        border-style: solid;
-        overflow: hidden; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: scale 0.5s ease-in-out;
-  }
-
-    .card:hover {
-    scale: 1.05;
-    }
-  
-  .card-image {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    }
-
-    .card-image img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    }   
-
-  .card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-  }
-
-    .card-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.7); 
-        color: #fff;
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0; 
-    }
-
-    .card:hover .card-info {
-        opacity: 1; 
-    }
-
-    .card-info h2 {
-        margin-bottom: 5px;
-        font-size: 18px;
-        color: #ffcc00;
-        text-align: center;
-    }
-
-    .card-info p {
-        margin-bottom: 0;
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-  .all-header{
-    background-color: #000;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 85px;
-    padding: 10px 10px;
-    transition: ease 0.3s;
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-.all-header .logo img{
-    height: 70px;
-    width: auto;
-    margin-right: auto;
+.card {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  min-width: auto;
+  min-height: auto;
+  max-height: 300px;
+  border-image: linear-gradient(#f6b73c, #3e3f3e) 30;
+  border-width: 4px;
+  border-style: solid;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: scale 0.5s ease-in-out;
 }
 
-.all-header .img:hover{
-    transform: scale(1.2);
+.card:hover {
+  scale: 1.05;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.card:hover .card-info {
+  opacity: 1;
+}
+
+.card-info h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: #ffcc00;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-info p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-right: 15px;
+}
+
+.all-header {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+  padding: 10px 10px;
+  transition: ease 0.3s;
+}
+
+.all-header .logo img {
+  height: 70px;
+  width: auto;
+  margin-right: auto;
+}
+
+.all-header .img:hover {
+  transform: scale(1.2);
 }
 
 .all-header .navSection {
-    display: flex; 
-    align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 .all-header .navlinks {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .all-header .navlinks li {
-    display: inline-block; 
-    margin-right: 10px; 
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .all-header .navlinks li:last-child {
-    margin-right: 0; 
+  margin-right: 0;
 }
 
 .all-header .navlinks li a {
-    text-decoration: none; 
-    color: white; 
-    padding: 10px 20px; 
-    border: 1px solid transparent; 
-    transition: border-color 0.3s; 
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
 }
 
 .all-header .navlinks li.active a {
-    font-weight: bold;
-    color: #ffcc00; 
-    border: 1px solid transparent; 
-    border-color: #ffcc00; 
+  font-weight: bold;
+  color: #ffcc00;
+  border: 1px solid transparent;
+  border-color: #ffcc00;
 }
 
 .all-header .navlinks li a:hover {
-    border-color: white; 
-    font-weight: bold;
+  border-color: white;
+  font-weight: bold;
 }

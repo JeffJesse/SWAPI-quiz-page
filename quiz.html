@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Wars Quiz</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
-<body>
-
-<div class="all-body">
-    <header class="all-header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars Quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/quizstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="all-body">
+      <header class="all-header">
         <div class="logo">
-            <img src="recursos/Yoda.webp" alt="">
+          <img src="recursos/Yoda.webp" alt="" />
         </div>
-        <nav class="navSection">
-            <ul class="navlinks">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="personajes.html">Personajes</a></li>
-                <li><a href="planetas.html">Planetas</a></li>
-                <li class="active"><a href="quiz.html">Quiz</a></li>
-            </ul>
+        <nav class="nav-section">
+          <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="personajes.html">Personajes</a></li>
+            <li><a href="planetas.html">Planetas</a></li>
+            <li class="active"><a href="quiz.html">Quiz</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <div id="alertContainer"></div>
-    
-    <div class="agruparContenido">
-        <nav class="selectorQuiz">
-            <ul class="opcionesQuiz">
-                <li><a href="#" class="active" data-quiz="personajes">PERSONAJES</a></li>
-                <li><a href="#" data-quiz="planetas">PLANETAS</a></li>
-            </ul>
+      <div id="contenedor-alerta"></div>
+
+      <div class="agrupar-contenido">
+        <nav class="selector-quiz">
+          <ul class="opciones-quiz">
+            <li>
+              <a href="#" class="active" data-quiz="personajes">PERSONAJES</a>
+            </li>
+            <li><a href="#" data-quiz="planetas">PLANETAS</a></li>
+          </ul>
         </nav>
 
         <div class="container">
-            <div class="card">
-                <div id="info-container">
-                    <div id="question-counter"></div>
-                    <div id="life-icons">
-                        <p>Cantidad de vidas:</p>
-                        <i id="corazon1" class="bi bi-heart-fill"></i>
-                        <i id="corazon2" class="bi bi-heart-fill"></i>
-                        <i id="corazon3" class="bi bi-heart-fill"></i>
-                    </div>
-                </div>
-                <h1>QUIZ</h1>
-                <h2> PERSONAJES</h2>
-                <img id="character-image" src="" alt="">
-                <div id="question"></div>
-                <div id="options"></div>
+          <div class="card">
+            <div id="contenedor-info">
+              <div id="contador-preguntas"></div>
+              <div id="iconos-vidas">
+                <p>Cantidad de vidas:</p>
+                <i id="corazon1" class="bi bi-heart-fill"></i>
+                <i id="corazon2" class="bi bi-heart-fill"></i>
+                <i id="corazon3" class="bi bi-heart-fill"></i>
+              </div>
             </div>
+            <h1>QUIZ</h1>
+            <h2>PERSONAJES</h2>
+            <img id="imagen-personaje" src="" alt="" />
+            <div id="pregunta"></div>
+            <div id="opciones"></div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-  <script src="scripts/script.js"></script>
-</body>
+    <script src="scripts/quizScript.js"></script>
+  </body>
 </html>

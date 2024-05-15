@@ -4,32 +4,48 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", Italic;
+  box-sizing: border-box;
 }
 
-.allbody {
-  background-image: url("/recursos/mando.jpg");
-  background-position: right;
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.all-body {
+  background-image: url(/recursos/fondospace.png);
+  background-position: top;
   background-size: cover;
+  height: 100%;
+  min-height: 18rem;
+  color: #222;
+}
+
+.filtro {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scroll {
+  margin: 0.6em auto;
+  max-width: 100%;
+  height: 90vh;
+  scroll-snap-align: start;
 }
 
 .all-header {
+  position: sticky;
+  top: 0;
   background-color: #000;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 85px;
+  height: 5em;
   padding: 10px 10px;
   transition: ease 0.3s;
-  top: 0; 
-  left: 0; 
-  right: 0;
-  position: fixed;
-  z-index: 1;
 }
 
 .all-header .logo img {
-  height: 70px;
+  height: 4.5em;
   width: auto;
   margin-right: auto;
 }
@@ -78,186 +94,517 @@
   font-weight: bold;
 }
 
-.section {
+.hero-section {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 100px auto;
+  padding-top: 200px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  color: #ffcc00;
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 72px;
+}
+
+.hero-content p {
+  color: white;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: bold;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  border-radius: 40px;
   width: 100%;
-  padding: 135px 0;
+  min-width: min(500px, 90vw);
+}
+
+.btnHero {
+  margin-top: 20px;
+  background-color: black;
+  box-shadow: 0 0 0 0 #ffcc00;
+  outline: 2px solid;
+  color: white;
+  outline-color: white;
+  outline-offset: 0;
+  text-shadow: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  max-width: 180px;
+  width: 100%;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  transition: all 550ms cubic-bezier(0.36, 0.63, 0.5, 0.73);
+}
+
+.btnHero:hover {
+  box-shadow: 0 0 0 2px #ffcc00;
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  color: #ffcc00;
+}
+
+/* Personajes */
+
+.personajes-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 300px auto;
+  flex-wrap: wrap;
+}
+
+.personajes-content {
+  flex: 1;
+  margin-right: 0;
+}
+
+.personajes-content h1 {
+  color: #ffcc00;
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 72px;
+  text-align: left;
+}
+
+.personajes-content p {
+  color: white;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.personajes-image {
+  flex: 1;
+}
+
+.personajes-image img {
+  border-radius: 40px;
+  max-width: 700px;
+  max-height: 700px;
+  width: 100%;
+  min-width: min(500px, 90vw);
+}
+
+.btnPersonajes {
+  margin-top: 20px;
+  margin-right: 40px;
+  background-color: black;
+  box-shadow: 0 0 0 0 #ffcc00;
+  outline: 2px solid;
+  color: white;
+  outline-color: white;
+  outline-offset: 0;
+  text-shadow: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  max-width: 180px;
+  width: 100%;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 550ms cubic-bezier(0.36, 0.63, 0.5, 0.73);
+}
+
+.btnPersonajes:hover {
+  box-shadow: 0 0 0 2px #ffcc00;
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  color: #ffcc00;
+}
+
+.btnPlanetas {
+  margin-top: 20px;
+  background-color: transparent;
+  box-shadow: 0 0 0 0 #ffcc00;
+  outline: 2px solid;
+  color: white;
+  outline-color: white;
+  outline-offset: 0;
+  text-shadow: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  max-width: 180px;
+  width: 100%;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 550ms cubic-bezier(0.36, 0.63, 0.5, 0.73);
+}
+
+.btnPlanetas:hover {
+  box-shadow: 0 0 0 2px #ffcc00;
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  color: #ffcc00;
+}
+
+.otros-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 100px auto;
+  flex-wrap: wrap;
+}
+
+.otros-content {
+  flex: 1;
+}
+
+.otros-content h1 {
+  color: #ffcc00;
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 72px;
+}
+
+.otros-content p {
+  color: white;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: bold;
+}
+
+.otros-image {
+  flex: 1;
+}
+
+.otros-image img {
+  border-radius: 40px;
+  max-width: 700px;
+  max-height: 700px;
+  width: 100%;
+  min-width: min(500px, 90vw);
+}
+
+.btnOtros {
+  margin-top: 20px;
+  background-color: black;
+  box-shadow: 0 0 0 0 #ffcc00;
+  outline: 2px solid;
+  color: white;
+  outline-color: white;
+  outline-offset: 0;
+  text-shadow: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  max-width: 180px;
+  width: 100%;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  transition: all 550ms cubic-bezier(0.36, 0.63, 0.5, 0.73);
+}
+
+.btnOtros:hover {
+  box-shadow: 0 0 0 2px #ffcc00;
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  color: #ffcc00;
+}
+
+.all-footer {
+  background-color: #000;
+  color: #fff;
+  padding-top: 2rem;
+  width: 100%;
+  height: 270px;
   display: flex;
   flex-direction: column;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer-columns{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    justify-items: center;
+}
+
+.footer-logo-column {
+  display: inline-block;
+  justify-items: center;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  flex-basis: 30%;
+  margin-bottom: 1.5rem;
 }
 
-.section h1 {
-  text-align: center;
-  font-size: 7.5vh;
-  color: #09061f;
-  -webkit-text-stroke: 1px #ffcc00;
+.footer-logo {
+  max-width: 60px;
+  justify-items: center;
 }
 
-.content {
-  text-align: center;
-}
-
-.landing-content {
-  text-align: center;
-  padding-right: 5px;
-  margin-bottom: 20px;
-  flex: 1;
-}
-
-.landing-content h2 {
-  text-align: center;
-  font-size: 9.5vh;
-  color: #000000;
-  -webkit-text-stroke: 1px #ffcc00;
-}
-
-.landing-content p {
-  font-size: 2.5vw;
-  color: #e4dcdc;
-  margin: 10px 0;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.button {
-  font-weight: bold;
-  display: inline-block;
-  padding: 12px 24px;
-  background: #000;
-  color: white;
-  font-size: 25px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  transition: scale 0.5;
-}
-
-.button:hover {
-  background: #ffcc00;
-  scale: 1.05;
-  color: black;
-  border: solid #000;
-}
-
-.image-container {
-  max-width: 40%;
-  text-align: center;
-  flex: 1;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.6s ease;
-  border-radius: 20px;
-}
-
-.logo {
-  float: left;
-}
-
-.navbar {
+.social-wrapper {
+  display: inline;
   text-align: center;
 }
 
-.peliculas-section {
+.social-links{
+    text-align: center;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
 
-.pelicula {
-  text-align: center;
-  position: relative;
-  background-color: #000000;
-  border-radius: 10px;
-  display: wrap;
-  max-width: 340px;
-  max-width: 340px;
+.social-links li {
+  margin-right: 1rem;
 }
 
-.pelicula img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.6s ease;
+.iconos{
+    fill: #fff;
+    height: 40px;
+    width: 40px;
+    margin-left: 13px;
 }
 
-.pelicula:hover img {
-  transform: scale(1.1);
+.iconos:hover{
+    fill: #ffcc00;
 }
 
-.info-pelicula {
-  margin-top: 10px;
-  font-size: 40px;
-  color: #000;
-  display: inline-block;
-  background-color: #f09000;
-  border-radius: 10px;
-  display: wrap;
-}
 
-.info-pelicula h4 {
-  margin: 0;
-}
-
-.pelicula:hover {
-  display: block;
-}
-.peliculas-section {
+.social-links a {
+  color: #fff;
+  transition: color 0.3s ease;
+  width: 40px;
+  height: 40px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
 
-.pelicula {
-  text-align: center;
-  position: relative;
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
+.social-links ul{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.navbar {
-  text-align: center;
-  background-color: #14010f;
-  padding: 40px 0;
+.social-links li{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.navbar a {
+
+.social-links a:hover {
+  color: #ffcc00;
+}
+
+.links-columns {
+    flex-basis: 60%;
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.links-columns .column {
+    flex-basis: 45%;
+    margin-bottom: 1.5rem;
+}
+
+.links-columns div {
+  flex-basis: 45%;
+  margin-bottom: 1.5rem;
+}
+
+.links-columns h3 {
+  margin-bottom: 0.5rem;
+}
+
+.links-columns ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-columns li {
+  margin-bottom: 0.5rem;
+}
+
+.links-columns a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 30px;
-  margin: 0 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .section {
+.links-columns a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .hero-section,
+  .personajes-section,
+  .otros-section {
     flex-direction: column;
-    gap: 0;
+    padding: 1em;
   }
 
-  .landing-content {
-    order: 2;
-    flex: initial;
-    width: 100%;
-    padding-right: 0;
-    margin-bottom: 0;
-    margin-top: 20px;
+  .hero-content h1,
+  .personajes-content h1,
+  .otros-content h1 {
+    font-size: 1.8rem;
   }
 
-  .image-container {
-    order: 1;
-    flex: initial;
+  .hero-content p,
+  .personajes-content p,
+  .otros-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image img,
+  .personajes-image img,
+  .otros-image img {
     max-width: 100%;
+  }
+
+  .all-header {
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+    z-index: 4;
+  }
+
+  .all-header .logo img {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .all-header .navSection {
     width: 100%;
-    padding-left: 0;
-    margin-bottom: 20px;
+  }
+
+  .all-header .navlinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .all-header .navlinks li {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .links-columns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    flex: 0 0 calc(50% - 20px); /* Ancho de cada columna */
+    margin-right: 20px; /* Espaciado entre columnas */
+  }
+
+  .column:last-child {
+    margin-right: 0; /* Elimina el espacio en la última columna */
+  }
+
+  .link-columns div section {
+    min-width: auto;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo-column {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .links-columns {
+    flex-basis: 100%;
+  }
+
+  .links-columns div {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-section,
+  .personajes-section,
+  .otros-section {
+    padding: 2em;
+  }
+
+  .hero-content h1,
+  .personajes-content h1,
+  .otros-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p,
+  .personajes-content p,
+  .otros-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img,
+  .personajes-image img,
+  .otros-image img {
+    max-width: 400px;
+  }
+
+  .link-columns div section {
+    min-width: auto;
   }
 }

@@ -3,7 +3,7 @@ $(document).ready(function () {
   let intentosRestantesPlanetas = 3;
   let totalPlanetas = [1, 2, 3, 6, 7];
   let planetasRespondidos = [];
-  let totalPersonajes = [2, 3, 4, 5, 10, 11, 13, 14, 20, 21, 22];
+  let totalPersonajes = [1, 2, 3, 4, 5, 10, 11, 13, 14, 20, 21, 22];
   let personajesRespondidos = [];
   let corazon1 = document.getElementById("corazon1");
   let corazon2 = document.getElementById("corazon2");
@@ -94,7 +94,7 @@ $(document).ready(function () {
         }
 
         $("#pregunta").text(pregunta);
-        $("#imagen-personaje").attr("src", "recursos/" + personajeID + ".jpg");
+        $("#imagen-personaje").attr("src", "recursos/" + personajeID + ".png");
 
         mezclarArreglo(opciones);
 

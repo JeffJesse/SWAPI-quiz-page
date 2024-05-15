@@ -94,7 +94,7 @@ $(document).ready(function () {
         }
 
         $("#pregunta").text(pregunta);
-        $("#imagen-personaje").attr("src", "recursos/" + personajeID + ".png");
+        $("#imagen-personaje").attr("src", "recursos/" + personajeID + ".jpg");
 
         mezclarArreglo(opciones);
 
